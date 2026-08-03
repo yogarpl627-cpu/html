@@ -1,0 +1,9 @@
+print("============================================")
+print          ("SELAMAT DATANG DI PYTHON")
+print("============================================")
+print()
+print("program ini dibuat oleh:", "Mohammad Faisal)")
+print("sekolah smk TJP tuban")
+print("tahun    :",2026)
+
+
