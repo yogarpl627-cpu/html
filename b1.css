@@ -1,0 +1,111 @@
+/* Properti Box Model */
+.kotak {
+  /* Konten */
+  width: 300px;
+  height: 150px;
+
+  /* Padding: shorthand (atas kanan bawah kiri) */
+  padding: 20px 30px 20px 30px;
+  /* atau: padding: 20px 30px; (atas-bawah | kiri-kanan) */
+  /* atau: padding: 20px; (semua sisi sama) */
+
+  /* Border */
+  border: 3px solid #1A5276;
+  /* Shorthand: ketebalan | jenis | warna */
+  border-radius: 8px; /* Sudut membulat */
+
+  /* Margin */
+  margin: 20px auto; /* atas-bawah: 20px, kiri-kanan: auto (tengah) */
+}
+
+/* box-sizing: border-box - SANGAT DIREKOMENDASIKAN! */
+/* Membuat width & height sudah termasuk padding & border */
+* {
+  box-sizing: border-box;
+}
+/* Border lengkap */
+.kotak {
+  border-width: 2px;      /* Ketebalan */
+  border-style: solid;    /* Jenis: solid, dashed, dotted, double, none */
+  border-color: #1A5276;  /* Warna */
+}
+
+/*/* Border lengkap */
+.kotak {
+  border-width: 2px;         /* Ketebalan */
+  border-style: solid;       /* Jenis: solid, dashed, dotted, double, none */
+  border-color: #1A5276;     /* Warna                /* Lingkaran penuh (untuk elemen persegi) */
+
+/* Membuat <a> (inline) menjadi block agar bisa diatur ukurannya */
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1A5276;
+    color: white;
+}
+
+/* Membuat <li> (block) menjadi inline untuk navbar horizontal */
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Menyembunyikan elemen */
+.tersembunyi { display: none; }    /* Hilang dari layout */
+.transparan { visibility: hidden; } /*
+.kotak-relative {
+    position: relative;
+    top: 10px;        /* Geser 10px ke bawah dari posisi asli */
+ left : 20px;       /* Geser 20px ke kanan dari posisi asli */
+}
+
+/* position: absolute - keluar dari alur, posisi relatif ke parent */
+.parent {
+    position: relative;    /* PENTING: parent harus relative/absolute/fixed */
+    width: 300px;
+    height: 200px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;       /* Pojok kanan atas parent */
+    background: red;
+    color: white;
+    border-radius: 50%;
+}
+
+/* position: fixed - tetap di layar walau di-scroll */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1A5276;
+z-index: 100; /* Pastikan di atas elemen lain */
+}
+
+/* position: sticky - menempel saat mencapai posisi tertentu */
+.section-header {
+    position: sticky;
+    top: 60px;        /* Menempel di 60px dari atas viewport */
+    background: white;
+    z-index: 10;
+}
+/* Kotak dengan scroll jika konten melebihi tinggi */
+.panel-teks {
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;    /* Scroll vertikal otomatis */
+  overflow-x: hidden;  /* Sembunyikan overflow horizontal */
+  border: 1px solid #BDC3C7;
+  padding: 16px;
+}
+
+/* Memotong teks panjang dengan ellipsis (...) */
+.judul-kartu {
+  white-space: nowrap;      /* Jangan bungkus teks */
+  overflow: hidden;         /* Sembunyikan yang meluber */
+  text-overflow: ellipsis;  /* Tampilkan '...' di akhir */
+  max-width: 200px;
+}
